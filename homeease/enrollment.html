@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll as Worker or Client</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .enroll-page {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .role-options {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        .role {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #3ab9cf;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .role:hover {
+            transform: scale(1.1);
+        }
+
+        .confirmation {
+            display: none;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #eb7d22;
+        }
+    
+    </style>
+  
+</head>
+
+<body>
+    <div class="enroll-page">
+        <h1>Do you want to enroll as?</h1>
+
+        <!-- Circular divs for selecting Worker or Client -->
+        <div class="role-options">
+            <div class="role" id="worker" onmouseover="hoverEffect(this)" onmouseout="resetEffect(this)" onclick="confirmRole('worker')">
+                <p>Worker</p>
+            </div>
+            <div class="role" id="client" onmouseover="hoverEffect(this)" onmouseout="resetEffect(this)" onclick="confirmRole('client')">
+                <p>Client</p>
+            </div>
+        </div>
+
+        <!-- Confirmation Popup -->
+        <div class="confirmation" id="confirmation">
+            <p>Are you sure you want to enroll as a <span id="role-name"></span>?</p>
+            <button onclick="confirmYes()">Yes</button>
+            <button onclick="confirmNo()">No</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle hover effect
+        function hoverEffect(element) {
+            element.style.transform = "scale(1.1)";
+        }
+
+        // Function to reset hover effect
+        function resetEffect(element) {
+            element.style.transform = "scale(1)";
+        }
+
+        // Function to show confirmation popup
+        function confirmRole(role) {
+            document.getElementById('confirmation').style.display = 'block';
+            document.getElementById('role-name').innerText = role;
+            sessionStorage.setItem('role', role);  // Store the selected role temporarily
+        }
+
+        // Function to confirm the selection
+        function confirmYes() {
+            const role = sessionStorage.getItem('role');
+            if (role === 'worker') {
+                window.location.href = 'workers.html';  // Redirect to workers page
+            } else if (role === 'client') {
+                window.location.href = 'clients.html';  // Redirect to clients page
+            }
+        }
+
+        // Function to cancel the selection
+        function confirmNo() {
+            document.getElementById('confirmation').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

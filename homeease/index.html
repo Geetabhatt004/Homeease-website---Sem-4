@@ -1,0 +1,211 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+     <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+ </head>
+ 
+ <body>
+     <div class="container">
+         <nav>
+             <div class="logo">
+                 <h1>HOMEASE</h1>
+             </div>
+             <ul>
+                 <li>
+                     <a id="home" onclick="home()">Home</a>
+                     <a id="services" onclick="shop()">Services</a>
+                     <a id="info" onclick="window.location.href='enrollment.html'">Info</a>
+                     <a id="about" onclick=" about()">About</a>
+                     <a id="contact" onclick="contact()">Contact</a>
+                     <div class="authentification">
+                        <a href="  http://localhost:5000/ "target="_blank">
+                        <button>Login</button>
+                    </a>
+                        <a href="  http://localhost:5000/">
+                        <button>SignUp</button>
+                    </a>
+                 </li>
+             </ul>
+         </nav>
+ 
+         <div class="mainPage">
+             <div class="text">
+                 <h2>WELCOME</h2>
+                 <h1 class="heads">TO HOMEASE..</h1>
+                 <h1>SERVES BEFORE YOU FIRST</h1>
+                 <p>Your Home, Our Care – Reliable Services, Anytime.</p>
+                 <button onclick="window.open('services.html', '_blank')">Explore</button>
+             </div>
+         </div>
+ 
+         <div class="cardMen">
+             <div class="head">
+                 <h1>SERVICES <span> for your Convenience</span></h1>
+             </div>
+             <div class="card" id="item1">
+                 <div class="crd">
+                     <img src="painter.jpeg" alt="" onclick="showCard(this)">
+                     <div class="txt">
+                         <h3>NEED A PAINTER?</h3>
+                           <button onclick="window.location.href='painter.html'">NEXT</button>
+                     </div>
+                 </div>
+                 <div class="crd">
+                     <img src="chef.jpeg" alt="" onclick="showCard(this)">
+                     <div class="txt">
+                         <h3>NEED A COOK?</h3>
+                         <button onclick="window.location.href='cook.html'">NEXT</button>
+                     </div>
+                 </div>
+                 <div class="crd">
+                     <img src="carpenter.jpeg" alt="" onclick="showCard(this)">
+                     <div class="txt">
+                         <h3>NEED A CARPENTER?</h3>
+                         <button onclick="window.location.href='carpenter.html'">NEXT</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+ 
+         <div class="cardgirl">
+             <div class="head">
+                 <h1>SOME MORE <span>Services for you..</span></h1>
+             </div>
+ 
+             <div class="card">
+                 <div class="crd">
+                     <img src="house-cleaner.jpeg" alt="" onclick="showCard(this)">
+                     <div class="txt">
+                         <h3>NEED A CLEANER?</h3>
+                         <button onclick="window.location.href='cleaner.html'">NEXT</button>
+                     </div>
+                 </div>
+                 <div class="crd">
+                     <img src="baby-sitter.jpeg" alt="" onclick="showCard(this)">
+                     <div class="txt">
+                         <h3>NEED A BABY-SITTER?</h3>
+                         <button onclick="window.location.href='babysitter.html'">NEXT</button>
+                     </div>
+                 </div>
+                 <div class="crd">
+                     <img src="more.jpeg" alt="" onclick="showCard(this)">
+                     <div class="txt">
+                        <button onclick="window.location.href='others.html'">NEXT</button>   
+                     </div>
+                 </div>
+             </div>
+         </div>
+ 
+         <div class="fullPage">
+             <div class="cartText">
+                 <h1>Trends Offer : Trending Services <br> Now</h1>
+                 <h2>Special Price</h2>
+                 <h2>$11</h2>
+                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                 <div class="btn">
+                     <button>Visit Now</button>
+                     <button onclick="addToCart()">Next</button>
+                 </div>
+                 <div class="btns">
+                     <button class="relode" onclick="location.reload()">Back </button>
+                 </div>
+             </div>
+         </div>
+ 
+         <div class="addCart"></div>
+ 
+         <div class="blogContent">
+             <div class="head">
+                 <h1>Trends Top <span>User's</span></h1>
+             </div>
+ 
+             <div class="trd">
+                 <div class="trending">
+                     <div class="txt">
+                        
+                         <h3>Trending User's</h3><br>
+                         <p>Discover the inspiring stories of our top users who have transformed their lives with our services. From homeowners to professionals, they share their experiences and how Homease has made a difference in their daily lives. Join the trend and become part of our thriving community today!</p>
+                         <a href="workers.html" style="display: block; text-align: center; margin-top: 10px;">Read More</a>
+                     </div>
+                 </div>
+                 <div class="trending">
+                     <img src="tr3.webp" alt="">
+                     
+                     <div class="txt">
+                        <h3>Trending Servicer's</h3>
+                        <p>Explore the profiles of our most dedicated and skilled service providers. From expert painters to reliable babysitters, meet the professionals who bring convenience and excellence to your doorstep.</p>
+                        <a href="services.html" style="display: block; text-align: center; margin-top: 10px;">Read More</a>
+                        
+                     </div>
+                 </div>
+             </div>
+         </div>
+ 
+         <div class="about">
+             <div class="aboutText">
+                 <h1>Know more about us...</h1>
+             </div>
+ 
+             <div class="aboutus">
+                 <p style="text-align: center; font-size: 25px; color: #555;">
+                     At Homease, we believe that every home deserves the best care and service. Our mission is to provide exceptional, reliable, and affordable services that make your life easier. Whether it's painting, cleaning, or babysitting, we're here to ensure that your home is always in the best hands. Join our family and experience the warmth and reliability we bring into your home. Together, we make every moment at home special!
+                 </p>
+             </div>
+ 
+             <div class="contact" id="contactSection">
+                 <div class="contactBanner">
+                     <h1>Let's Connect</h1>
+                     <p> We're always here to help. Reach out to us anytime, and let's make your home a better place together!</p>
+                 </div>
+                 <div class="connectText">
+                     <h1>Visit Our App or Contact <br> Us Today on our Gmail </h1>
+                     <p> Gmail Address : dumiemail@gmail.com</p>
+                     <p>Number : 999999000011</p>
+                 </div>
+             </div>
+         </div>
+ 
+         <div class="footer">
+             <div class="Ftext">
+                 <h1>Trends</h1>
+                 <p>Service</p>
+                 <p>Customer</p>
+                 <p>for more install our App</p>
+             </div>
+             <div class="Ftext">
+                 <h3>About US</h3>
+                 <p>Address : you can Contact us on our App<br> <br> Gmail Address : aarrppiittaa@gmail.com</p>
+                 <p>Service</p>
+                 <p>Customer</p>
+                 <p>Satisfaction</p>
+             </div>
+             <div class="Ftext">
+                 <h3>Contact</h3>
+                 <p>9989003229</p>
+                 <p>Customer</p>
+                 <p>Coming up..</p>
+                 <p>New Services</p>
+             </div>
+             <div class="Ftext">
+                 <h3>Trending</h3>
+                 <p>Service</p>
+                 <p>Customer</p>
+                 <p>Memberships</p>
+             </div>
+         </div>
+     </div>
+ 
+     <script src="first.js"></script>
+ </body>
+ 
+ </html>
+ 

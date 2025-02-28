@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-column {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover effect for each individual div */
+        .service-column:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .service-column h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .service-column p {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="services-grid">
+            <div class="service-column">
+                <h2>Painter</h2>
+                <img src="painter.jpeg" alt="Painter Service" class="service-image" onclick="window.open('painter.html', '_blank')">
+                <p>Professional painting services for your home and office.</p>
+            </div>
+            <div class="service-column">
+                <h2>Cook</h2>
+                <img src="chef.jpeg" alt="Cook Service" class="service-image" onclick="window.open('cook.html', '_blank')">
+                <p>Expert cooks to prepare delicious meals at your convenience.</p>
+            </div>
+            <div class="service-column">
+                <h2>Carpenter</h2>
+                <img src="carpenter.jpeg" alt="Carpenter Service" class="service-image" onclick="window.open('carpenter.html', '_blank')">
+                <p>Skilled carpenters for all your furniture and woodwork needs.</p>
+            </div>
+            <div class="service-column">
+                <h2>Cleaner</h2>
+                <img src="house-cleaner.jpeg" alt="Cleaning Service" class="service-image" onclick="window.open('cleaner.html', '_blank')">
+                <p>Efficient cleaning services for a sparkling clean home.</p>
+            </div>
+            <div class="service-column">
+                <h2>Baby-Sitter</h2>
+                <img src="baby-sitter.jpeg" alt="Baby-Sitter Service" class="service-image" onclick="window.open('babysitter.html', '_blank')">
+                <p>Reliable babysitters to take care of your little ones.</p>
+            </div>
+            <div class="service-column">
+                <h2>Other Services</h2>
+                <img src="more.jpeg" alt="Other Services" class="service-image" onclick="window.open('other.html', '_blank')">
+                <p>Explore more services tailored to your needs.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
